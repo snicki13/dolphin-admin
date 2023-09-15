@@ -22,7 +22,7 @@ export class UsersService implements IUsersService {
   async findOneById(id: number): Promise<UserEntity> {
     const user = await this.prismaService.user.findFirst({
       where: {
-        id
+        id: 1
       }
     })
     if (!user) {

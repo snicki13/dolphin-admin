@@ -1,16 +1,16 @@
 import { createI18n } from 'vue-i18n'
 
+import de_DE from '@/locales/de_DE.json'
 import en_US from '@/locales/en_US.json'
-import zh_CN from '@/locales/zh_CN.json'
 import type { Lang, MessageSchema } from '@/types'
 
 const i18n = createI18n<[MessageSchema], Lang>({
   legacy: false,
   locale: LangUtils.getDefaultLang(),
-  fallbackLocale: 'zh_CN',
+  fallbackLocale: 'en_US',
   messages: {
     en_US,
-    zh_CN
+    de_DE
   }
 })
 

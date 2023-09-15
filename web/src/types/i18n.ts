@@ -1,8 +1,8 @@
-import type zhCN from '@/locales/zh_CN.json'
+import type enUS from '@/locales/en_US.json'
 
-export type Lang = 'zh_CN' | 'en_US'
+export type Lang = 'de_DE' | 'en_US'
 
-export type MessageSchema = typeof zhCN
+export type MessageSchema = typeof enUS
 
 type Concat<K extends string, V extends string> = `${K}.${V}`
 

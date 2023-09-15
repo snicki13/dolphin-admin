@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => {
     '/base-api': {
       target: VITE_BASE_API_PROXY,
       changeOrigin: true,
-      rewrite: (path: string) => path.replace(/^\/base-api/, '')
+      rewrite: (path: string) => path.replace(/^\/base-api/, 'api')
     },
     '/base-api-v2': {
       target: VITE_BASE_API_V2_PROXY,

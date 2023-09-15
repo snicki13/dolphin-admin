@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 import { CustomLogger, LoggerType } from '../src/custom.logger'
 import { randAvatar } from '@ngneat/falso'
 import { hash } from '@node-rs/bcrypt'
-import type { Prisma, Role, User } from '@prisma/client'
+import type { Prisma } from '@prisma/client'
 
 const prisma = new PrismaClient()
 

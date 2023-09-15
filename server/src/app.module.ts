@@ -23,6 +23,7 @@ import {
 
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
+import { UsersController } from './modules/users/users.controller'
 
 @Module({
   imports: [
@@ -51,7 +52,7 @@ import { AppService } from './app.service'
       loader: I18nJsonLoader
     })
   ],
-  controllers: [AppController],
+  controllers: [AppController, UsersController],
   providers: [AppService, Logger]
 })
 export class AppModule implements NestModule {
