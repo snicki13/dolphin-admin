@@ -50,7 +50,7 @@ const rules: FormRules = {
 }
 
 /**
- * 登录
+ * Log in
  */
 const login = async () => {
   try {
@@ -99,7 +99,7 @@ const login = async () => {
 }
 
 /**
- * 基础登录
+ * Basic login
  */
 const loginAsBasic = () => {
   submitType.value = 'BASIC'
@@ -107,7 +107,7 @@ const loginAsBasic = () => {
 }
 
 /**
- * 以管理员身份登录
+ * Log in as an administrator
  */
 const loginAsAdmin = () => {
   submitType.value = 'ADMIN'
@@ -117,12 +117,12 @@ const loginAsAdmin = () => {
 }
 
 /**
- * 忘记密码
+ * forget the password
  */
 const forgetPassword = () => {}
 
 onMounted(() => {
-  // 从 localStorage 中获取记住的账号密码
+  // from localStorage Get the account password to be remembered
   const localStorageData = AuthUtils.getRememberedAccount()
   if (localStorageData) {
     try {

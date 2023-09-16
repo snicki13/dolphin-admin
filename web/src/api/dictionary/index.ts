@@ -13,7 +13,7 @@ export class DictionaryAPI {
   private static DICTIONARY_API_PREFIX = `${GlobalEnvConfig.MOCK_API_PROXY}/dictionaries`
 
   /**
-   * 字典管理列表
+   * Dictionary management list
    */
   static getDictionaries(params: PageRequestModel) {
     return Request.get<PageResponse<Dictionary[]>>(this.DICTIONARY_API_PREFIX, {
@@ -22,7 +22,7 @@ export class DictionaryAPI {
   }
 
   /**
-   * 创建字典
+   * Create a dictionary
    */
   static createDictionary(data: Dictionary) {
     return Request.post<BaseResponse<Dictionary>>(this.DICTIONARY_API_PREFIX, {
@@ -31,7 +31,7 @@ export class DictionaryAPI {
   }
 
   /**
-   * 修改字典
+   * Modify the dictionary
    */
   static updateDictionaryById(id: number, data: Dictionary) {
     return Request.put<BaseResponse<Dictionary>>(

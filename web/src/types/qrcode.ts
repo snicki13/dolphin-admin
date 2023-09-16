@@ -1,11 +1,11 @@
 import type { QRCodeErrorCorrectionLevel } from 'qrcode'
 
 /**
- * 二维码配置项
- * @description 用于配置二维码的相关参数
- * - `margin`: 二维码边距
- * - `width`: 二维码宽度
- * - `errorCorrectionLevel`: 二维码容错率
+ * QR code configuration item
+ * @description related parameters used to configure the QR code
+ * -` Margin`: QR code edge
+ * -` width`: QR code width
+ * -`` ErrorCorrectionLevel`: QR code fault tolerance rate
  * @see
  * - [qrcode](https://www.npmjs.com/package/qrcode)
  */

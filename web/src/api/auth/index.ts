@@ -7,7 +7,7 @@ export class AuthAPI {
   private static AUTH_API_PREFIX = `${GlobalEnvConfig.BASE_API_PREFIX}/auth`
 
   /**
-   * 登录
+   * Log in
    */
   static login(data: LoginModel) {
     return Request.post<BaseResponse<UserTokenResponse>>(
@@ -17,7 +17,7 @@ export class AuthAPI {
   }
 
   /**
-   * 注册
+   * register
    */
   static signup(data: SignupModel) {
     return Request.post<BaseResponse<UserTokenResponse>>(
@@ -27,7 +27,7 @@ export class AuthAPI {
   }
 
   /**
-   * GitHub 登录
+   * GitHub Log in
    */
   static loginWithGitHub(code: string) {
     return Request.post<BaseResponse<UserTokenResponse>>(
@@ -37,7 +37,7 @@ export class AuthAPI {
   }
 
   /**
-   * Google 登录
+   * Google Log in
    */
   static loginWithGoogle(code: string) {
     return Request.post<BaseResponse<UserTokenResponse>>(

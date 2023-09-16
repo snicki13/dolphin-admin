@@ -21,7 +21,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prisma:generate": "prisma generate && prisma generate --schema=/Users/snicki/git/dolphin-admin/server/prisma/schema.prisma",
+    "prisma:generate": "prisma generate && prisma generate --schema=./server/prisma/schema.prisma",
     "prisma:generate:watch": "prisma generate --watch && prisma generate --watch --schema=./src/prisma/schema.prisma",
     "prisma:migrate:dev": "prisma migrate dev --skip-seed",
     "prisma:migrate:deploy": "prisma migrate deploy",

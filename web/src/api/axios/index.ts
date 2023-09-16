@@ -34,7 +34,7 @@ class Request {
 
     this.instance.interceptors.request.use(
       (req: InternalAxiosRequestConfig) => {
-        // 设置 token
+        // set up token
         const { url } = req
         if (
           AuthUtils.isAuthenticated() &&
@@ -43,7 +43,7 @@ class Request {
           req.headers.Authorization = AuthUtils.getAuthorization()
         }
 
-        // 设置语言
+        // language setting
         req.headers.Language = LangUtils.getDefaultLang()
         return req
       },
@@ -58,7 +58,7 @@ class Request {
         if (response) {
           Request.handleCode(status as number)
         }
-        // 网络错误，跳转到 404 页面
+        // Network error, jump to page 404
         if (!window.navigator.onLine) {
           router.replace('/404')
           message.error(t('Common.NetworkError'))
@@ -69,14 +69,14 @@ class Request {
   }
 
   /**
-   * 处理响应状态码
-   * @param code 响应状态码
-   * @description 根据响应状态码进行相应的处理
-   * - 401 未授权，清除 token 并跳转到登录页
-   * - 403 禁止访问，TODO: 提示用户无权限访问
-   * - 404 未找到，TODO: 跳转到 404 页面
-   * - 500 服务器错误，TODO: 跳转到 500 页面
-   * - 其他状态码，提示错误信息
+   * Processing response status code
+   * @param code response status code
+   * @description performs accordingly according to the response status code
+   * -401 Unauthorized, remove Token and jump to the login page
+   * -403 Forbidden access, TODO: Prompt that users have no right to access
+   * -404 No found, TODO: Jump to page 404
+   * -500 server error, todo: jump to pages 500
+   * -Statuscode, prompt error information
    */
   static handleCode(code: number): void {
     const errorMessage = errorMessageMap.get(code) || 'Unknown Error!'
@@ -118,18 +118,18 @@ class Request {
   }
 
   /**
-   * 通用请求
-   * @param config 请求配置
+   * GM request
+   * @param config request configuration
    */
   request(config: AxiosRequestConfig) {
     return this.instance.request(config)
   }
 
   /**
-   * GET 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param config 请求配置
+   * Get request
+   * @param url request address
+   * @param Params request parameters
+   * @param config request configuration
    */
   get<T>(
     url: string,
@@ -140,10 +140,10 @@ class Request {
   }
 
   /**
-   * POST 请求
-   * @param url 请求地址
-   * @param data 请求数据
-   * @param config 请求配置
+   * Post request
+   * @param url request address
+   * @param data Request Data
+   * @param config request configuration
    */
   post<T>(
     url: string,
@@ -154,10 +154,10 @@ class Request {
   }
 
   /**
-   * PUT 请求
-   * @param url 请求地址
-   * @param data 请求数据
-   * @param config 请求配置
+   * PUT request
+   * @param url Request address
+   * @param data Request data
+   * @param config Request configuration
    */
   put<T>(
     url: string,
@@ -168,10 +168,10 @@ class Request {
   }
 
   /**
-   * DELETE 请求
-   * @param url 请求地址
-   * @param params 请求参数
-   * @param config 请求配置
+   * DELETE request
+   * @param url Request address
+   * @param params Request parameters
+   * @param config Request configuration
    */
   delete<T>(
     url: string,
@@ -182,10 +182,10 @@ class Request {
   }
 
   /**
-   * PATCH 请求
-   * @param url 请求地址
-   * @param data 请求数据
-   * @param config 请求配置
+   * PATCH request
+   * @param url Request address
+   * @param data Request data
+   * @param config Request configuration
    */
   patch<T>(
     url: string,

@@ -2,10 +2,10 @@
  * @description 响应状态码
  */
 export enum ResponseStatusCode {
-  // 成功响应
+  // Response
   SUCCESS = 200,
   CREATED = 201,
-  // 客户端错误
+  // Client error
   BAD_REQUEST = 400,
   UNAUTHORIZED = 401,
   FORBIDDEN = 403,
@@ -19,7 +19,7 @@ export enum ResponseStatusCode {
 }
 
 /**
- * @description 响应状态码对应的错误信息
+ * @description The error message corresponding to the status code
  */
 export const errorMessageMap = new Map<ResponseStatusCode, string>([
   [ResponseStatusCode.BAD_REQUEST, '400: Bad Request!'],
