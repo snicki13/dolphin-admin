@@ -9,11 +9,11 @@ export class UploadAPI {
   private static headers = { 'Content-Type': 'multipart/form-data' }
 
   /**
-   * 上传文件
-   * @param data 文件数据
-   * @param options 上传配置
+   * upload files
+   * @param data File data
+   * @param options Upload configuration
    *
-   * @todo 进度条功能暂未实现
+   * @todo progress bar function has not been realized yet
    */
   static uploadFile(data: any, options?: UploadOptions) {
     return Request.post<BaseResponse<UploadResponse>>(
@@ -29,11 +29,11 @@ export class UploadAPI {
   }
 
   /**
-   * 批量上传文件
-   * @param data 文件数据
-   * @param options 上传配置
+   * Batch upload file
+   * @param data file data
+   * @param Options upload configuration
    *
-   * @todo 进度条功能暂未实现
+   * @todo progress bar function has not been realized yet
    */
   static uploadFiles(data: any) {
     return Request.post(`${this.UPLOAD_API_PREFIX}/batch`, data, {

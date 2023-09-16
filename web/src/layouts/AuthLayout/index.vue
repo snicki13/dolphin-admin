@@ -8,9 +8,9 @@ const { t } = useI18n<{ message: MessageSchema }>({ useScope: 'global' })
 const userStore = useUserStore()
 const router = useRouter()
 
-// 检查登录状态
+// Check the login status
 const checkLogin = () => {
-  // 如果已经登录，直接跳转到首页，否则清除用户信息
+  // If you have logged in, jump directly to the homepage, otherwise you will remove user information
   if (AuthUtils.isAuthenticated()) {
     router.replace('/')
   } else {
