@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "streetsidesoftware.code-spell-checker", // Code Spell Checker
     "EditorConfig.EditorConfig", // EditorConfig
     "usernamehw.errorlens", // Error Lens
     "dbaeumer.vscode-eslint", // ESLint
