@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
@@ -46,6 +47,7 @@ export default defineConfig(({ mode }) => {
     base: '/',
     plugins: [
       vue(),
+      VueI18nPlugin({}),
       AutoImport({
         dts: true,
         include: [

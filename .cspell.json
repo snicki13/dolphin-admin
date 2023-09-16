@@ -30,6 +30,7 @@
     "server/prisma/generated",
     "server/prisma/migrations",
     "pnpm-lock.yaml",
-    "README.md"
+    "README.md",
+    "de_DE.json"
   ]
 }

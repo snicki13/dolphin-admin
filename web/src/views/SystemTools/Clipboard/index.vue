@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Lang, MessageSchema } from '@/types'
 
-import { ChineseLyrics, EnglishLyrics } from './private'
+import { EnglishLyrics } from './private'
 
 const { t, locale } = useI18n<{ message: MessageSchema }, Lang>({
   useScope: 'global'
@@ -12,7 +12,7 @@ const message = useMessage()
 const clipboardValue = ref('')
 
 /**
- * 复制文本
+ * Copy
  */
 const handleCopy = async () => {
   try {
@@ -23,13 +23,13 @@ const handleCopy = async () => {
   }
 }
 
-// 监听语言变化，给予默认值
+// Change the language of the listening language, give silent recognition
 watch(
   () => locale.value,
   () => {
     switch (locale.value) {
-      case 'zh_CN':
-        clipboardValue.value = ChineseLyrics
+      case 'de_DE':
+        clipboardValue.value = EnglishLyrics
         break
       case 'en_US':
         clipboardValue.value = EnglishLyrics

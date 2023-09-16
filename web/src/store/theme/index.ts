@@ -1,4 +1,4 @@
-import { darkTheme, dateEnUS, dateZhCN, enUS, lightTheme, zhCN } from 'naive-ui'
+import { darkTheme, dateDeDE, dateEnUS, deDE, enUS, lightTheme } from 'naive-ui'
 
 import { darkThemeOverrides, lightThemeOverrides } from '@/constants'
 import type { Lang, Theme } from '@/types'
@@ -60,9 +60,9 @@ export const useThemeStore = defineStore('theme', () => {
    */
   const changeLocale = (selectedLocale: Lang) => {
     switch (selectedLocale) {
-      case 'zh_CN':
-        locale.value = zhCN
-        dateLocale.value = dateZhCN
+      case 'de_DE':
+        locale.value = deDE
+        dateLocale.value = dateDeDE
         break
       case 'en_US':
         locale.value = enUS

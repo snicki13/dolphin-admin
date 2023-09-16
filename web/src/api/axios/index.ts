@@ -12,7 +12,7 @@ import type { PageModel } from '@/types'
 import { axiosConfig } from './config'
 import { errorMessageMap, ResponseStatusCode } from './statusCode'
 
-const { t } = i18n.global
+const { t } = useI18n()
 
 const themeStore = useThemeStore()
 
